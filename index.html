@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>DreamTrip - пасажирські перевезення</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+</head>
+<body>
+  <header>
+    <h1>DreamTrip - пасажирські автомобільні перевезення</h1>
+  </header>
+
+  <div class="seagull" aria-hidden="true"></div>
+
+  <div class="humor-seagull-container seagull-left-container" id="seagullLeft">
+    <img src="humor_seagull_dreamtrip.png" alt="Смішна чайка, що кричить" class="humor-seagull seagull-left-img">
+    <div class="seagull-speech-bubble seagull-speech-bubble-left">
+      <p>Замовляй!</p>
+    </div>
+  </div>
+
+  <div class="humor-seagull-container seagull-right-container" id="seagullRight">
+    <img src="seagull_bus.png" alt="Чайка в автобусі DreamTrip" class="humor-seagull seagull-right-img">
+    <div class="seagull-speech-bubble seagull-speech-bubble-right">
+      <p>Поки ти думав...</p>
+    </div>
+  </div>
+
+  <nav class="nav" aria-label="Головна навігація">
+    <ul class="menu" id="main-menu">
+      <li><a href="#home" class="nav-link">Головна</a></li>
+
+      <li class="has-submenu">
+        <button class="submenu-toggle" aria-expanded="false" aria-controls="routes-submenu">Маршрути ▾</button>
+        <ul class="submenu" id="routes-submenu" aria-hidden="true">
+          <li><a href="#ukr-routes" class="nav-link">Українські напрямки</a></li>
+          <li><a href="#int-routes" class="nav-link">Міжнародні напрямки</a></li>
+          <li><a href="#popular" class="nav-link">Популярні рейси</a></li>
+        </ul>
+      </li>
+
+      <li class="has-submenu">
+        <button class="submenu-toggle" aria-expanded="false" aria-controls="services-submenu">Послуги ▾</button>
+        <ul class="submenu" id="services-submenu" aria-hidden="true">
+          <li><a href="#intercity" class="nav-link">Міжміські перевезення</a></li>
+          <li><a href="#international" class="nav-link">Міжнародні перевезення</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#booking" id="booking-link" class="nav-link">Бронювання</a></li>
+      <li><a href="#contacts" class="nav-link">Контакти</a></li>
+    </ul>
+  </nav>
+
+  <main id="home">
+    <section class="hero">
+      <img src="bus_DreamTrip.jpg" alt="DreamTrip автобус" class="hero-image" width="600">
+      <div class="hero-text">
+        <h2>Подорожуйте з комфортом</h2>
+        <p>
+          DreamTrip — надійний перевізник, що забезпечує зручні та безпечні поїздки по Україні та за її межі.
+          Ми піклуємося про комфорт пасажирів: сучасний автопарк, професійні водії та уважне обслуговування.
+        </p>
+      </div>
+    </section>
+
+    <section id="services" class="info">
+      <h2>Наші послуги</h2>
+      <ul>
+        <li id="intercity"><strong>Міжміські перевезення</strong> — регулярні рейси між містами з комфортними умовами.</li>
+        <li id="international"><strong>Міжнародні перевезення</strong> — маршрути до сусідніх країн з комфортними перетинами кордону.</li>
+      </ul>
+    </section>
+
+    <section id="routes" class="info">
+      <h2>Маршрути</h2>
+      <div class="routes-grid">
+        <div>
+          <h3 id="ukr-routes">Українські напрямки</h3>
+          <p>Щоденні рейси: Київ, Львів, Одеса, Дніпро та інші великі міста.</p>
+        </div>
+        <div>
+          <h3 id="int-routes">Міжнародні напрямки</h3>
+          <p>Комфортні поїздки до Варшави, Будапешта, Бухареста та інших міст.</p>
+        </div>
+        <div>
+          <h3 id="popular">Популярні рейси</h3>
+          <p>Рейси для відпочинку, вихідних та відпусток — найпопулярніші напрямки.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="booking" class="booking-section">
+      <h2>Бронювання квитка</h2>
+      <form action="#" method="post" id="bookingForm">
+        <fieldset>
+          <legend>Особисті дані</legend>
+
+          <label for="firstName">Ім'я:</label>
+          <input type="text" id="firstName" name="firstName" required>
+
+          <label for="lastName">Прізвище:</label>
+          <input type="text" id="lastName" name="lastName" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="phone">Телефон:</label>
+          <input type="tel" id="phone" name="phone" placeholder="+380..." required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Інформація про поїздку</legend>
+
+          <label>Звідки:
+            <select name="from">
+              <option value="kyiv">Київ</option>
+              <option value="lviv">Львів</option>
+              <option value="odesa">Одеса</option>
+              <option value="warsaw">Варшава</option>
+            </select>
+          </label>
+
+          <label>Куди:
+            <select name="to">
+              <option value="kyiv">Київ</option>
+              <option value="lviv">Львів</option>
+              <option value="odesa">Одеса</option>
+              <option value="warsaw">Варшава</option>
+            </select>
+          </label>
+
+          <label for="date">Дата поїздки:</label>
+          <input type="date" id="date" name="date">
+
+          <label for="tickets">Кількість квитків:</label>
+          <input type="number" id="tickets" name="tickets" value="1" min="1" max="10">
+        </fieldset>
+
+        <fieldset>
+          <legend>Опції</legend>
+          <label><input type="checkbox" name="wifi"> Wi-Fi</label>
+          <label><input type="checkbox" name="air"> Кондиціонер</label>
+          <label><input type="checkbox" name="socket"> Розетка</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Транспорт</legend>
+          <label><input type="radio" name="transport" value="bus" checked> Автобус</label>
+          <label><input type="radio" name="transport" value="minibus"> Мікроавтобус</label>
+        </fieldset>
+
+        <label for="comment">Коментар:</label>
+        <textarea id="comment" name="comment" rows="4" cols="40"></textarea>
+
+        <div class="form-actions">
+          <input type="submit" value="Забронювати">
+          <input type="reset" value="Скинути">
+        </div>
+      </form>
+    </section>
+
+    <section id="contacts" class="info">
+      <h2>Контакти</h2>
+      <p>Телефон: +380665571086 | Email: dreamtrip@gmail.com</p>
+      <p>Адреса: м. Одеса, вул. Дерибасівська, 7</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; DreamTrip 2025 &nbsp; | &laquo;Подорож мрії&raquo;
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
